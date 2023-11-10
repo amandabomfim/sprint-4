@@ -1,6 +1,6 @@
 import ComponentePlano from "@/components/ComponentePlano";
 import Link from "next/link";
-import styles from "./planos.module.css";
+import styles from "./Planos.module.css";
 
 export default function Plano() {
   return (

@@ -21,12 +21,12 @@ export default function Home() {
                     </div>
                     <div className={styles.botoesPaginaInicial}>
                         <Link href="/planos">
-                            <button className={`${styles.botaoPadrao} ${styles.tamanho_1_5rem}`}>
+                            <button className={`botaoPadrao ${styles.tamanho_1_5rem}`}>
                                 Iniciar Vistoria
                             </button>
                         </Link>
                         <Link href="/equipe">
-                            <button className={`${styles.botaoPadrao} ${styles.tamanho_1_5rem}`}>
+                            <button className={`botaoPadrao ${styles.tamanho_1_5rem}`}>
                                 Equipe
                             </button>
                         </Link>
