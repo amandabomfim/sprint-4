@@ -1,0 +1,51 @@
+.txtPagConfirmacao {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+.imgPagConfirmacao {
+  width: 300px;
+}
+
+.centralizarImgConfirmacao {
+  display: flex;
+  justify-content: center;
+}
+
+.tituloPagConfirmacao {
+  color: black;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.conteudoConfirmacao {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+}
+
+.mainConfirmacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+}
+
+.conteudoConfirmacao {
+  max-width: 1280px;
+}
+
+@media (max-width: 768px) {
+  .imgPagConfirmacao {
+    width: 200px;
+  }
+
+  .tituloPagConfirmacao {
+    font-size: 1rem;
+  }
+}

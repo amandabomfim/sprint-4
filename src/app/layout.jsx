@@ -36,12 +36,12 @@ export default function RootLayout({ children }) {
               </ul>
             </div>
             <div className="botoes-pagina-inicial">
-              <Link href="planos">
+              <Link href="/planos">
                 <button className="botao-padrao tamanho-1-5rem">
                   Iniciar Vistoria
                 </button>
               </Link>
-              <Link href="equipe">
+              <Link href="/equipe">
                 <button className="botao-padrao tamanho-1-5rem">Equipe</button>
               </Link>
             </div>

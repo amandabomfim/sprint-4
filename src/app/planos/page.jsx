@@ -1,6 +1,6 @@
-import React from "react";
-import ComponenteLogo from "../../components/ComponenteLogo";
-import ComponentePlano from "../components/ComponetePlano";
+import "../planos/planos.css";
+import ComponenteLogo from "@/components/ComponenteLogo";
+import ComponentePlano from "@/components/ComponentePlano";
 
 export default function Plano() {
   return (
