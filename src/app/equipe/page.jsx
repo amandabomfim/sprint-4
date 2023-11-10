@@ -1,4 +1,4 @@
-import ComponenteLogo from "../components/ComponenteLogo";
+import ComponenteLogo from "@/components/componenteLogo/ComponenteLogo";
 
 export default function Equipe() {
   return (

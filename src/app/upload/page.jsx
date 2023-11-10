@@ -1,8 +1,7 @@
-import ComponenteLogo from "../components/ComponenteLogo";
-import UploadFoto from "../images/UploadFoto.png";
-import ComponenteUpload from "../components/ComponenteUploud";
-import NavButtons from "../components/NavButtons";
-import "../upload/upload.css";
+import ComponenteLogo from "@/components/componenteLogo/ComponenteLogo";
+import UploadFoto from "/public/UploadFoto.png";
+import ComponenteUpload from "@/components/ComponenteUploud";
+import NavButtons from "@/components/NavButtons";
 
 export default function Upload() {
   return (

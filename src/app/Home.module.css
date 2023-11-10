@@ -1,0 +1,130 @@
+.textLeftPI {
+    text-align: left;
+}
+.textLeftPI ul {
+    margin-left: 2rem;
+}
+
+.paginaPrincipal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0;
+}
+
+.conteudoPrincipal {
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    color: #009EE2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.conteudoPrincipal h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.conteudoPrincipal h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+}
+
+.conteudoPrincipal li {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    color: #000;
+    margin: 0.75rem;
+}
+
+.botaoPadrao {
+    font-size: 1.2rem;
+    color: white;
+    background-color: #009EE2;
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s ease-in-out;
+    margin-right: 1em;
+    
+}
+
+.botaoPadrao:hover {
+    filter: brightness(0.9);
+    scale: 1.02;
+}
+
+.tamanho_1_5rem {
+    font-size: 1.5rem;
+}
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.rightColumn {
+  height: 100vh; 
+}
+
+.rightColumn img {
+    min-height: 100vh;
+    display: block;
+}
+
+
+.botoesPaginaInicial {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+@media (max-width: 1280px){
+    .conteudoPrincipal h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .conteudoPrincipal h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .conteudoPrincipal li {
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .conteudoPrincipal button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .rightColumn {
+        display: none;
+        width: 0%;
+    }
+
+}

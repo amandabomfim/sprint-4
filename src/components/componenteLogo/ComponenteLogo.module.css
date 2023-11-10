@@ -1,0 +1,11 @@
+.componenteLogo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    
+  }
+  
+  .componenteLogo img {
+    width: 217px;
+    height: 120px;
+  }

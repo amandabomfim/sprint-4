@@ -1,4 +1,6 @@
-import ComponenteLogo from "../components/ComponenteLogo";
+'use client'
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Cadastro() {
   const [formData, setFormData] = useState({
@@ -18,7 +20,7 @@ export default function Cadastro() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const navigate = useNavigate();
+  const navigate = useRouter();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,9 +29,6 @@ export default function Cadastro() {
 
   return (
     <main>
-      <div className="logo">
-        <ComponenteLogo />
-      </div>
       <div className="titulo">CADASTRO</div>
       <form onSubmit={handleSubmit}>
         <div className="campo">

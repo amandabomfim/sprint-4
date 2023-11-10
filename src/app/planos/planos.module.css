@@ -1,4 +1,4 @@
-.section-plano {
+.sectionPlano {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -8,7 +8,7 @@
 
 /* Plano.css */
 
-.plano-container {
+.planoContainer {
   display: flex;
 
   justify-content: center;
@@ -63,21 +63,17 @@
   padding-top: 1rem;
 }
 
-.plano-container a {
+.planoContainer a {
   text-decoration: none;
   cursor: pointer;
 }
 
-.logo {
-  margin-bottom: 10rem;
-}
-
-.plano-container h1 {
+.planoContainer h1 {
   color: #009ee2;
   font-size: 2rem;
 }
 
-.plano-container li {
+.planoContainer li {
   color: #333333;
   font-size: 1.5rem;
 }
