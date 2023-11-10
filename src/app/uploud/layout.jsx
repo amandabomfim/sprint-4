@@ -1,6 +1,6 @@
 import ComponenteLogo from "../components/ComponenteLogo";
 import UploadFoto from "../images/UploadFoto.png";
-import ComponenteUpload from "../components/ComponenteUpload";
+import ComponenteUpload from "../components/ComponenteUploud";
 import NavButtons from "../components/NavButtons";
 import "../styles/Upload.css";
 
