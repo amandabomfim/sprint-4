@@ -1,0 +1,99 @@
+/* Estilizando o container dos quadrados */
+.Upload-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Estilizando cada quadrado individualmente */
+.fotoFrente,
+.fotoLateralEsquerda,
+.fotoLateralDireita,
+.fotoNumSerie {
+  padding: 2rem; /* Espaçamento interno */
+  text-align: center; /* Centraliza o conteúdo */
+  background-color: #d9d9d9; /* Cor de fundo */
+  width: 400px;
+  height: 300px;
+}
+
+/* Estilizando o texto dentro de cada quadrado */
+.fotoFrente h2,
+.fotoLateralEsquerda h2,
+.fotoLateralDireita h2,
+.fotoNumSerie h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.alinhamentoUpload {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 1rem;
+}
+
+.instrucaoFoto {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  color: black;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-left: 4rem;
+}
+
+.LinksNavUpload {
+  position: absolute;
+  top: 4rem;
+  right: 20px;
+}
+
+.colunmConfirmacao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1280px) {
+  .fotoFrente,
+  .fotoLateralEsquerda,
+  .fotoLateralDireita,
+  .fotoNumSerie {
+    padding: 1rem;
+    width: 300px;
+    height: 200px;
+  }
+
+  .instrucaoFoto {
+    font-size: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  .alinhamentoUpload {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Upload-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .LinksNavUpload {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-bottom: 1rem;
+  }
+}
