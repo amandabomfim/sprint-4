@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
                   Iniciar Vistoria
                 </button>
               </Link>
-              <Link href="/">
+              <Link href="equipe">
                 <button className="botao-padrao tamanho-1-5rem">Equipe</button>
               </Link>
             </div>
