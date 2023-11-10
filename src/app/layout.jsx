@@ -1,8 +1,11 @@
-import { Inter } from "next/font/google";
+  import { Roboto } from 'next/font/google'
 import "./globals.css";
 import ComponenteLogo from "@/components/componenteLogo/ComponenteLogo";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+})
 
 export const metadata = {
   title: "VISTORIA - PORTO SEGURO",
@@ -12,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>
+      <body className={roboto.className}>
       <ComponenteLogo />
         {children}
       </body>
