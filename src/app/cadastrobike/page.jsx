@@ -22,7 +22,7 @@ export default function CadastroBike() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate("/cadastro/upload");
+        navigate.push("/upload");
     };
 
     return (
