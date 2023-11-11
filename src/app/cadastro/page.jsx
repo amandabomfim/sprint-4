@@ -25,7 +25,7 @@ export default function Cadastro() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/cadastro/bike");
+    navigate.push("/cadastrobike");
   };
 
   return (
