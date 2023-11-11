@@ -1,32 +1,32 @@
-// import ComponenteLogo from "../components/ComponenteLogo";
-// import PagConfirmacao from "../images/PagConfirmacao.png";
-// import "../confirmacao/confirmacao.css";
+import PagConfirmacao from "/public/PagConfirmacao.png";
+import styles from "./Confirmacao.module.css";
+import Image from "next/image";
 
-// export default function Confirmacao() {
-//   return (
-//     <main className="mainConfirmacao">
-//       <div className="conteudoConfirmacao">
-//         <div className="logo">
-//           <ComponenteLogo />
-//         </div>
-//         <div className="conteudoConfirmacao">
-//           <div className="centralizarImgConfirmacao">
-//             <img
-//               src={PagConfirmacao}
-//               alt="Confirmacao"
-//               className="imgPagConfirmacao"
-//             />
-//           </div>
+export default function Confirmacao() {
+    return (
+        <main className={styles.mainConfirmacao}>
+            <div className={styles.conteudoConfirmacao}>
+                <div className={styles.conteudoConfirmacao}>
+                    <div className={styles.centralizarImgConfirmacao}>
+                        <Image
+                            src={PagConfirmacao}
+                            alt="Confirmacao"
+                            className={styles.imgPagConfirmacao}
+                            width={700}
+                            height={590}
+                        />
+                    </div>
 
-//           <div className="tituloPagConfirmacao">
-//             <h1>FOTOS ENVIADAS COM SUCESSO! </h1>
-//             <h1>
-//               AS IMAGENS ESTÃO SENDO ANALISADAS PELA NOSSA EQUIPE E EM BREVE
-//               ENTRAREMOS EM CONTATO PELO E-MAIL CADASTRADO.
-//             </h1>
-//           </div>
-//         </div>
-//       </div>
-//     </main>
-//   );
-// }
+                    <div >
+                        <h1 className={styles.tituloPagConfirmacao}>FOTOS ENVIADAS COM SUCESSO! </h1>
+                        <p className={styles.txtPagConfirmacao}>
+                            AS IMAGENS ESTÃO SENDO ANALISADAS PELA NOSSA EQUIPE
+                            E EM BREVE ENTRAREMOS EM CONTATO PELO E-MAIL
+                            CADASTRADO.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    );
+}

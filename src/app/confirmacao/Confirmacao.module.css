@@ -1,11 +1,13 @@
 .txtPagConfirmacao {
   font-size: 2.5rem;
-  font-weight: bold;
   color: black;
+  text-align: center;
 }
 
 .imgPagConfirmacao {
   width: 300px;
+  height: 252px;
+
 }
 
 .centralizarImgConfirmacao {
@@ -15,8 +17,9 @@
 
 .tituloPagConfirmacao {
   color: black;
-  font-size: 1.5rem;
+  font-size: 3rem;
   text-align: center;
+  font-weight: bold;
 }
 
 .conteudoConfirmacao {
@@ -34,6 +37,7 @@
   flex-direction: column;
   align-self: center;
   justify-self: center;
+  height: 100vh;
 }
 
 .conteudoConfirmacao {
@@ -43,9 +47,16 @@
 @media (max-width: 768px) {
   .imgPagConfirmacao {
     width: 200px;
+    height: 168px;
+  }
+
+  .txtPagConfirmacao {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
   }
 
   .tituloPagConfirmacao {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 }
