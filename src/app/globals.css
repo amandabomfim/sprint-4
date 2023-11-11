@@ -15,9 +15,7 @@
     border-radius: 1rem;
     cursor: pointer;
     border: none;
-    transition: 0.2s ease-in-out;
-    margin-right: 1em;
-    
+    transition: 0.2s ease-in-out;    
 }
 
 .botaoPadrao:hover {

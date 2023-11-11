@@ -1,5 +1,17 @@
+.uploadMain {
+  margin-top: 8rem;
+  text-align: center;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #009ee2;
+}
+
 /* Estilizando o container dos quadrados */
-.Upload-container {
+.UploadContainer {
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -47,17 +59,12 @@
   padding-left: 4rem;
 }
 
-.LinksNavUpload {
-  position: absolute;
-  top: 4rem;
-  right: 20px;
-}
-
 .colunmConfirmacao {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
 @media (max-width: 1280px) {
@@ -80,20 +87,11 @@
     align-items: center;
   }
 
-  .Upload-container {
+  .UploadContainer {
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .LinksNavUpload {
-    position: relative;
-    top: 0;
-    right: 0;
-    margin-bottom: 1rem;
   }
 }
