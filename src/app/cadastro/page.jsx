@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import styles from "./Cadastro.module.scss";
 
 export default function Cadastro() {
   const [formData, setFormData] = useState({
@@ -28,10 +29,10 @@ export default function Cadastro() {
   };
 
   return (
-    <main>
-      <div className="titulo">CADASTRO</div>
+    <main className={styles.cadastroMain}>
+      <div className={styles.titulo}>CADASTRO</div>
       <form onSubmit={handleSubmit}>
-        <div className="campo">
+        <div className={styles.campo}>
           <label htmlFor="nome">Nome:</label>
           <input
             type="text"
@@ -42,7 +43,7 @@ export default function Cadastro() {
             required
           />
         </div>
-        <div className="campo">
+        <div className={styles.campo}>
           <label htmlFor="dataNascimento">Data de Nascimento:</label>
           <input
             type="date"
@@ -53,7 +54,7 @@ export default function Cadastro() {
             required
           />
         </div>
-        <div className="campo">
+        <div className={styles.campo}>
           <label htmlFor="email">Email:</label>
           <input
             type="text"
@@ -64,7 +65,7 @@ export default function Cadastro() {
             required
           />
         </div>
-        <div className="campo">
+        <div className={styles.campo}>
           <label htmlFor="rg">RG:</label>
           <input
             type="text"
@@ -75,7 +76,7 @@ export default function Cadastro() {
             required
           />
         </div>
-        <div className="campo">
+        <div className={styles.campo}>
           <label htmlFor="cpf">CPF:</label>
           <input
             type="text"
@@ -86,7 +87,7 @@ export default function Cadastro() {
             required
           />
         </div>
-        <div className="campo">
+        <div className={styles.campo}>
           <label htmlFor="celular">Celular:</label>
           <input
             type="text"
@@ -97,7 +98,7 @@ export default function Cadastro() {
             required
           />
         </div>
-        <div className="campo">
+        <div className={styles.campo}>
           <label htmlFor="cep">CEP:</label>
           <input
             type="text"
@@ -108,7 +109,7 @@ export default function Cadastro() {
             required
           />
         </div>
-        <div className="campo">
+        <div className={styles.campo}>
           <label htmlFor="endereco">Endereço:</label>
           <input
             type="text"
@@ -119,7 +120,7 @@ export default function Cadastro() {
             required
           />
         </div>
-        <div className="campo">
+        <div className={styles.campo}>
           <label htmlFor="complemento">Complemento:</label>
           <input
             type="text"

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Home.module.css";
-import ComponenteLogo from "@/components/componenteLogo/ComponenteLogo";
 import imagemBicicleta from "/public/imgpaginaprincipal.jpeg";
 
 export default function Home() {
