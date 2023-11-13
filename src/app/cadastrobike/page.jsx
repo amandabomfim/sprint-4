@@ -56,7 +56,7 @@ export default function CadastroBike() {
         if (msgResponse.status == 400) {
             setmsg(msgResponse.body);
             setTimeout(() => {
-                setFormData({ ...formData, dsEmail: "" });
+                setBikeData({ ...bikeData, dsEmail: "" });
                 setmsg("");
             }, 3000);
         }
