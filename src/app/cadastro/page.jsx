@@ -40,6 +40,9 @@ export default function Cadastro() {
             value={formData.nome}
             onChange={handleChange}
             required
+            maxLength={50}
+            
+
           />
         </div>
         <div className={styles.campo}>
@@ -62,6 +65,7 @@ export default function Cadastro() {
             value={formData.email}
             onChange={handleChange}
             required
+            maxLength={50}
           />
         </div>
         <div className={styles.campo}>
@@ -72,7 +76,9 @@ export default function Cadastro() {
             name="rg"
             value={formData.rg}
             onChange={handleChange}
+            maxLength={15}
             required
+
           />
         </div>
         <div className={styles.campo}>
@@ -83,6 +89,7 @@ export default function Cadastro() {
             name="cpf"
             value={formData.cpf}
             onChange={handleChange}
+            maxLength={14}
             required
           />
         </div>
@@ -94,6 +101,7 @@ export default function Cadastro() {
             name="celular"
             value={formData.celular}
             onChange={handleChange}
+            maxLength={15}
             required
           />
         </div>
@@ -105,6 +113,7 @@ export default function Cadastro() {
             name="cep"
             value={formData.cep}
             onChange={handleChange}
+            maxLength={8}
             required
           />
         </div>
@@ -116,6 +125,7 @@ export default function Cadastro() {
             name="endereco"
             value={formData.endereco}
             onChange={handleChange}
+            maxLength={50}
             required
           />
         </div>
