@@ -3,12 +3,15 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./Cadastrobike.module.scss";
 
+
+/* Cadastro bike */
 export default function CadastroBike() {
     const [bikeData, setBikeData] = useState({
+        marca : "",
+        nr_modelo: "",
         modelo: "",
         tipo: "",
-        cor: "",
-        tamanhoAro: "",
+        cd_serie: "",
         valor: "",
         acessorios: "",
     });
@@ -29,6 +32,18 @@ export default function CadastroBike() {
         <main className={styles.cadastroBikeMain}>
             <div className={styles.titulo}>CADASTRO BIKE</div>
                 <form onSubmit={handleSubmit}>
+                <label>
+                        Marca:
+                        <input
+                            type="text"
+                            name="marca"
+                            value={bikeData.marca}
+                            onChange={handleChange}
+                            required
+                            maxLength={50}
+                        />
+                    </label>
+                    
                     <label>
                         Modelo:
                         <input
@@ -37,8 +52,22 @@ export default function CadastroBike() {
                             value={bikeData.modelo}
                             onChange={handleChange}
                             required
+                            maxLength={50}
                         />
                     </label>
+
+                    <label>
+                        Nr. Modelo:
+                        <input
+                            type="number"
+                            name="nr_modelo"
+                            value={bikeData.nr_modelo}
+                            onChange={handleChange}
+                            required
+                            maxLength={10}
+                        />
+                    </label>
+
                     <label>
                         Tipo:
                         <input
@@ -46,33 +75,25 @@ export default function CadastroBike() {
                             name="tipo"
                             value={bikeData.tipo}
                             onChange={handleChange}
+                            maxLength={20}
                             required
                         />
                     </label>
                     <label>
-                        Cor:
+                        Cod. Série:
                         <input
                             type="text"
-                            name="cor"
-                            value={bikeData.cor}
+                            name="cd_serie"
+                            value={bikeData.cd_serie}
                             onChange={handleChange}
-                            required
-                        />
-                    </label>
-                    <label>
-                        Tamanho do Aro:
-                        <input
-                            type="text"
-                            name="tamanhoAro"
-                            value={bikeData.tamanhoAro}
-                            onChange={handleChange}
+                            maxLength={16}
                             required
                         />
                     </label>
                     <label>
                         Valor:
                         <input
-                            type="text"
+                            type="number"
                             name="valor"
                             value={bikeData.valor}
                             onChange={handleChange}
@@ -85,6 +106,8 @@ export default function CadastroBike() {
                             name="acessorios"
                             value={bikeData.acessorios}
                             onChange={handleChange}
+                            required
+                            maxLength={100}
                         />
                     </label>
                     <button type="submit">Cadastrar Bicicleta</button>
