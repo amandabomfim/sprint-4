@@ -6,14 +6,14 @@ import styles from "./Cadastro.module.scss";
 
 export default function Cadastro() {
   const [formData, setFormData] = useState({
-    nome: "",
-    dataNascimento: "",
-    email: "",
+    nmCliente: "",
+    dtNascimento: "",
+    dsEmail: "",
     rg: "",
     cpf: "",
-    celular: "",
+    telefone: "",
     cep: "",
-    endereco: "",
+    dsEndereco: "",
   });
 
   const handleChange = (e) => {
@@ -40,9 +40,9 @@ export default function Cadastro() {
           <label htmlFor="nome">Nome:</label>
           <input
             type="text"
-            id="nome"
-            name="nome"
-            value={formData.nome}
+            id="nmCliente"
+            name="nmCliente"
+            value={formData.nmCliente}
             onChange={handleChange}
             maxLength={50}
             minLength={5}
@@ -56,9 +56,9 @@ export default function Cadastro() {
           <label htmlFor="dataNascimento">Data de Nascimento:</label>
           <input
             type="date"
-            id="dataNascimento"
-            name="dataNascimento"
-            value={formData.dataNascimento}
+            id="dtNascimento"
+            name="dtNascimento"
+            value={formData.dtNascimento}
             onChange={handleChange}
             max='2005-11-13'
             required
@@ -68,9 +68,9 @@ export default function Cadastro() {
           <label htmlFor="email">Email:</label>
           <input
             type="text"
-            id="email"
-            name="email"
-            value={formData.email}
+            id="dsEmail"
+            name="dsEmail"
+            value={formData.dsEmail}
             onChange={handleChange}
             maxLength={50}
             minLength={7}
@@ -108,9 +108,9 @@ export default function Cadastro() {
           <label htmlFor="celular">Celular:</label>
           <input
             type="text"
-            id="celular"
-            name="celular"
-            value={formData.celular}
+            id="telefone"
+            name="telefone"
+            value={formData.telefone}
             onChange={handleChange}
             maxLength={15}
             minLength={8}
@@ -134,9 +134,9 @@ export default function Cadastro() {
           <label htmlFor="endereco">Endereço:</label>
           <input
             type="text"
-            id="endereco"
-            name="endereco"
-            value={formData.endereco}
+            id="dsEndereco"
+            name="dsEndereco"
+            value={formData.dsEndereco}
             onChange={handleChange}
             maxLength={50}
             minLength={5}

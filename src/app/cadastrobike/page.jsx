@@ -2,20 +2,19 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./Cadastrobike.module.scss";
-import Link from "next/link";
 
 
 /* Cadastro bike */
 export default function CadastroBike() {
     const [bikeData, setBikeData] = useState({
         dsEmail : "",
-        marca : "",
-        nr_modelo: "",
-        modelo: "",
-        tipo: "",
-        cd_serie: "",
-        valor: "",
-        acessorios: "",
+        nmMarca : "",
+        nrModelo: "",
+        nmModelo: "",
+        tpBicicleta: "",
+        cdSerie: "",
+        vlBicicleta: "",
+        nmAcessorio: "",
     });
 
     const handleChange = (e) => {
@@ -27,8 +26,8 @@ export default function CadastroBike() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (bikeData.acessorios === "") {
-            setBikeData({ ...bikeData, acessorios: "Nenhum" });
+        if (bikeData.nmAcessorio === "") {
+            setBikeData({ ...bikeData, nmAcessorio: "Nenhum" });
         }
         fetch("/api/vistoria", {
             method: "POST",
@@ -45,8 +44,7 @@ export default function CadastroBike() {
                         Email Cadastrado:
                         <input
                             type="text"
-                            id="email"
-                            name="email"
+                            name="dsEmail"
                             value={bikeData.dsEmail}
                             onChange={handleChange}
                             maxLength={50}
@@ -59,8 +57,8 @@ export default function CadastroBike() {
                         Marca:
                         <input
                             type="text"
-                            name="marca"
-                            value={bikeData.marca}
+                            name="nmMarca"
+                            value={bikeData.nmMarca}
                             onChange={handleChange}
                             required
                             maxLength={50}
@@ -71,8 +69,8 @@ export default function CadastroBike() {
                         Modelo:
                         <input
                             type="text"
-                            name="modelo"
-                            value={bikeData.modelo}
+                            name="nmModelo"
+                            value={bikeData.nmModelo}
                             onChange={handleChange}
                             required
                             maxLength={50}
@@ -83,8 +81,8 @@ export default function CadastroBike() {
                         Nr. Modelo:
                         <input
                             type="number"
-                            name="nr_modelo"
-                            value={bikeData.nr_modelo}
+                            name="nrModelo"
+                            value={bikeData.nrModelo}
                             onChange={handleChange}
                             required
                             maxLength={10}
@@ -95,8 +93,8 @@ export default function CadastroBike() {
                         Tipo:
                         <input
                             type="text"
-                            name="tipo"
-                            value={bikeData.tipo}
+                            name="tpBicicleta"
+                            value={bikeData.tpBicicleta}
                             onChange={handleChange}
                             maxLength={20}
                             required
@@ -106,8 +104,8 @@ export default function CadastroBike() {
                         Cod. Série:
                         <input
                             type="text"
-                            name="cd_serie"
-                            value={bikeData.cd_serie}
+                            name="cdSerie"
+                            value={bikeData.cdSerie}
                             onChange={handleChange}
                             maxLength={16}
                             required
@@ -117,8 +115,8 @@ export default function CadastroBike() {
                         Valor:
                         <input
                             type="number"
-                            name="valor"
-                            value={bikeData.valor}
+                            name="vlBicicleta"
+                            value={bikeData.vlBicicleta}
                             onChange={handleChange}
                             required
                         />
@@ -126,8 +124,8 @@ export default function CadastroBike() {
                     <label>
                         Acessórios (opcional):
                         <textarea
-                            name="acessorios"
-                            value={bikeData.acessorios}
+                            name="nmAcessorio"
+                            value={bikeData.nmAcessorio}
                             onChange={handleChange}
                             maxLength={100}
                         />
