@@ -6,7 +6,7 @@ export default function Plano() {
   return (
     <main>
     <div className={styles.sectionPlano}>
-      <div className={styles.titulo}>ESCOLHA SEU SEGURO</div>
+      <div className={styles.titulo}><h1>ESCOLHA SEU SEGURO:</h1></div>
       <div className={styles.planoContainer}>
         <Link href="/cadastro">
           <div className={styles.pedalEssencial}>
