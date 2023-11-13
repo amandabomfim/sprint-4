@@ -1,5 +1,5 @@
 .uploadMain {
-  margin-top: 8rem;
+  margin-top: 7rem;
   text-align: center;
 }
 
@@ -17,13 +17,13 @@
   gap: 2rem;
   flex-direction: row;
   flex-wrap: wrap;
+  padding: 1rem;
 }
 
 /* Estilizando cada quadrado individualmente */
 .fotoFrente,
-.fotoLateralEsquerda,
-.fotoLateralDireita,
-.fotoNumSerie {
+.fotoLateral 
+{
   padding: 2rem; /* Espaçamento interno */
   text-align: center; /* Centraliza o conteúdo */
   background-color: #d9d9d9; /* Cor de fundo */
@@ -33,9 +33,7 @@
 
 /* Estilizando o texto dentro de cada quadrado */
 .fotoFrente h2,
-.fotoLateralEsquerda h2,
-.fotoLateralDireita h2,
-.fotoNumSerie h2 {
+.fotoLateral h2 {
   font-size: 16px;
   font-weight: bold;
 }
@@ -54,7 +52,7 @@
   align-items: flex-start;
   text-align: left;
   color: black;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   padding-left: 4rem;
 }

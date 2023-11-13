@@ -1,3 +1,14 @@
+.planosMain {
+  margin-top: 7rem;
+}
+
+.titulo {
+    text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #009ee2;
+}
+
 .sectionPlano {
   min-height: 100vh;
   display: flex;

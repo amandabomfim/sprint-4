@@ -25,14 +25,8 @@ export default function Upload() {
       <div className={styles.fotoFrente}>
         <ComponenteUpload titulo="Foto Frontal"></ComponenteUpload>
       </div>
-      <div className={styles.fotoLateralEsquerda}>
-        <ComponenteUpload titulo="Foto Lateral Esquerda"></ComponenteUpload>
-      </div>
-      <div className={styles.fotoLateralDireita}>
-        <ComponenteUpload titulo="Foto Lateral Direita"></ComponenteUpload>
-      </div>
-      <div className={styles.fotoNumSerie}>
-        <ComponenteUpload titulo="Foto Número Série"></ComponenteUpload>
+      <div className={styles.fotoLateral}>
+        <ComponenteUpload titulo="Foto Lateral"></ComponenteUpload>
       </div>
     </div>
   </div>

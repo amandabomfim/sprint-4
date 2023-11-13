@@ -4,7 +4,7 @@ import styles from "./planos.module.css";
 
 export default function Plano() {
   return (
-    <main>
+    <main className={styles.planosMain}>
     <div className={styles.sectionPlano}>
       <div className={styles.titulo}>ESCOLHA SEU SEGURO</div>
       <div className={styles.planoContainer}>

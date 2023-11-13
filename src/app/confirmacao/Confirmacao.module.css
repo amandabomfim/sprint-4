@@ -1,5 +1,5 @@
 .txtPagConfirmacao {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: black;
   text-align: center;
 }
@@ -16,8 +16,8 @@
 }
 
 .tituloPagConfirmacao {
-  color: black;
-  font-size: 3rem;
+  color: #009ee2;
+  font-size: 2rem;
   text-align: center;
   font-weight: bold;
 }
