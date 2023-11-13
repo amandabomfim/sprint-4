@@ -13,7 +13,6 @@ export default function Cadastro() {
     celular: "",
     cep: "",
     endereco: "",
-    complemento: "",
   });
 
   const handleChange = (e) => {
@@ -40,7 +39,12 @@ export default function Cadastro() {
             name="nome"
             value={formData.nome}
             onChange={handleChange}
+            maxLength={50}
+            minLength={5}
             required
+            
+            
+
           />
         </div>
         <div className={styles.campo}>
@@ -62,6 +66,8 @@ export default function Cadastro() {
             name="email"
             value={formData.email}
             onChange={handleChange}
+            maxLength={50}
+            minLength={10}
             required
           />
         </div>
@@ -73,7 +79,10 @@ export default function Cadastro() {
             name="rg"
             value={formData.rg}
             onChange={handleChange}
+            maxLength={15}
+            minLength={9}
             required
+
           />
         </div>
         <div className={styles.campo}>
@@ -84,6 +93,8 @@ export default function Cadastro() {
             name="cpf"
             value={formData.cpf}
             onChange={handleChange}
+            maxLength={14}
+            minLength={11}
             required
           />
         </div>
@@ -95,6 +106,8 @@ export default function Cadastro() {
             name="celular"
             value={formData.celular}
             onChange={handleChange}
+            maxLength={15}
+            minLength={8}
             required
           />
         </div>
@@ -106,6 +119,8 @@ export default function Cadastro() {
             name="cep"
             value={formData.cep}
             onChange={handleChange}
+            maxLength={8}
+            minLength={5}
             required
           />
         </div>
@@ -117,17 +132,8 @@ export default function Cadastro() {
             name="endereco"
             value={formData.endereco}
             onChange={handleChange}
-            required
-          />
-        </div>
-        <div className={styles.campo}>
-          <label htmlFor="complemento">Complemento:</label>
-          <input
-            type="text"
-            id="complemento"
-            name="complemento"
-            value={formData.complemento}
-            onChange={handleChange}
+            maxLength={50}
+            minLength={5}
             required
           />
         </div>
