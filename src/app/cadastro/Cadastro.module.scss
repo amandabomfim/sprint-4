@@ -1,6 +1,7 @@
 .cadastroMain {
 
     margin-top: 7rem;
+    
 
 
     .titulo {
@@ -9,6 +10,12 @@
         font-size: 2rem;
         font-weight: bold;
         color: #009ee2;
+    }
+
+    .txtPC {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-top: 1rem;
     }
 
     & form {
