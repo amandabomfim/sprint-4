@@ -17,6 +17,8 @@ export default function CadastroBike() {
         nmAcessorio: "",
     });
 
+    const [msg, setmsg] = useState("");
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setBikeData({ ...bikeData, [name]: value });
@@ -24,21 +26,57 @@ export default function CadastroBike() {
 
     const navigate = useRouter();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
+
         e.preventDefault();
+
         if (bikeData.nmAcessorio === "") {
             setBikeData({ ...bikeData, nmAcessorio: "Nenhum" });
         }
-        fetch("/api/vistoria", {
+
+        const response = await fetch("/api/vistoria", {
             method: "POST",
             body: JSON.stringify(bikeData),
         });
-        navigate.push("/upload");
+
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+
+          const msgResponse = await response.json();
+          if (msgResponse.status == 200) {
+              setmsg(msgResponse.body);
+              setTimeout(() => {
+                  setmsg("");
+                  navigate.push("/upload");
+              }, 3000);
+          }
+          if (msgResponse.status == 400) {
+              setmsg(msgResponse.body);
+              setTimeout(() => {
+                  setFormData({ ...formData, dsEmail: "" });
+                  setmsg("");
+              }, 3000);
+          }
+          if (msgResponse.status == 500) {
+              setmsg(msgResponse.body);
+              setTimeout(() => {
+                  setmsg("");
+              }, 3000);
+          }
+          if (msgResponse.status == 404) {
+              setmsg(msgResponse.body);
+              setTimeout(() => {
+                  setmsg("");
+              }, 3000);
+          }
     };
 
     return (
         <main className={styles.cadastroBikeMain}>
             <div className={styles.titulo}>CADASTRO BIKE</div>
+            <h1 className="text-center">{msg}</h1>
                 <form onSubmit={handleSubmit}>
                 <label>
                         Email Cadastrado:
@@ -118,6 +156,7 @@ export default function CadastroBike() {
                             name="vlBicicleta"
                             value={bikeData.vlBicicleta}
                             onChange={handleChange}
+                            min={2000}
                             required
                         />
                     </label>

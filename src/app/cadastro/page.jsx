@@ -67,7 +67,7 @@ export default function Cadastro() {
     return (
         <main className={styles.cadastroMain}>
             <div className={styles.titulo}>CADASTRO</div>
-            <h1 id="top" className="text-center">
+            <h1 className="text-center">
                 {msg}
             </h1>
             <form onSubmit={handleSubmit}>
