@@ -26,16 +26,20 @@ export default function Cadastro() {
     const navigate = useRouter();
 
     const handleSubmit = async (e) => {
+         // Faz uma requisição para a API com os dados do formulário
         e.preventDefault();
         const response = await fetch("/api/cliente", {
             method: "POST",
             body: JSON.stringify(formData),
         });
+        // Realiza a rolagem suave para o topo da página
         window.scrollTo({
           top: 0,
           behavior: 'smooth'
         });
+        // Recebe a resposta da requisição da API
         const msgResponse = await response.json();
+        // Lógica para exibir mensagens com base nas respostas da API
         if (msgResponse.status == 200) {
             setmsg(msgResponse.body);
             setTimeout(() => {
