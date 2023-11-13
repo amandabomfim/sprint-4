@@ -10,6 +10,15 @@
   color: #009ee2;
 }
 
+.centralizarMain {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 /* Estilizando o container dos quadrados */
 .UploadContainer {
   display: flex;
@@ -21,19 +30,30 @@
 }
 
 /* Estilizando cada quadrado individualmente */
-.fotoFrente,
-.fotoLateral 
+.foto
 {
+  position: relative;
   padding: 2rem; /* Espaçamento interno */
   text-align: center; /* Centraliza o conteúdo */
   background-color: #d9d9d9; /* Cor de fundo */
-  width: 400px;
-  height: 300px;
+  width:350px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+
+.fotoBike {
+  position: absolute;
+  top: 10px;
+  margin: auto;
+  max-width: 240px;
+  max-height: 240px;
 }
 
 /* Estilizando o texto dentro de cada quadrado */
-.fotoFrente h2,
-.fotoLateral h2 {
+.foto h2 {
   font-size: 16px;
   font-weight: bold;
 }
@@ -66,13 +86,15 @@
 }
 
 @media (max-width: 1280px) {
-  .fotoFrente,
-  .fotoLateralEsquerda,
-  .fotoLateralDireita,
-  .fotoNumSerie {
+  .foto {
     padding: 1rem;
     width: 300px;
-    height: 200px;
+    height: 300px;
+  }
+
+  .fotoBike {
+    max-width: 200px;
+    max-height: 200px;
   }
 
   .instrucaoFoto {

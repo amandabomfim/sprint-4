@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./Cadastrobike.module.scss";
 
+
 /* Cadastro bike */
 export default function CadastroBike() {
     const [bikeData, setBikeData] = useState({
@@ -24,15 +25,15 @@ export default function CadastroBike() {
     };
 
     const navigate = useRouter();
-
     const handleSubmit = async (e) => {
+        localStorage.setItem("bike", JSON.stringify(bikeData));
         e.preventDefault();
         // Caso o campo de acessórios esteja vazio, o valor "Nenhum" é atribuído a ele
         if (bikeData.nmAcessorio === "") {
             setBikeData({ ...bikeData, nmAcessorio: "Nenhum" });
         }
         // Faz uma requisição para a API com os dados do formulário
-        const response = await fetch("/api/vistoria", {
+        const response = await fetch("/api/bicicleta", {
             method: "POST",
             body: JSON.stringify(bikeData),
         });
@@ -48,6 +49,7 @@ export default function CadastroBike() {
             setmsg(msgResponse.body);
             setTimeout(() => {
                 setmsg("");
+                
                 navigate.push("/upload");
             }, 3000);
         }
