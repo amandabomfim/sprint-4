@@ -41,6 +41,7 @@ export default function CadastroBike() {
                             onChange={handleChange}
                             required
                             maxLength={50}
+                            minLength={5}
                         />
                     </label>
                     
@@ -53,6 +54,7 @@ export default function CadastroBike() {
                             onChange={handleChange}
                             required
                             maxLength={50}
+                            minLength={5}
                         />
                     </label>
 
@@ -65,6 +67,7 @@ export default function CadastroBike() {
                             onChange={handleChange}
                             required
                             maxLength={10}
+                            minLength={5}
                         />
                     </label>
 
@@ -76,6 +79,7 @@ export default function CadastroBike() {
                             value={bikeData.tipo}
                             onChange={handleChange}
                             maxLength={20}
+                            minLength={5}
                             required
                         />
                     </label>
@@ -87,6 +91,7 @@ export default function CadastroBike() {
                             value={bikeData.cd_serie}
                             onChange={handleChange}
                             maxLength={16}
+                            minLength={5}
                             required
                         />
                     </label>
@@ -108,6 +113,7 @@ export default function CadastroBike() {
                             onChange={handleChange}
                             required
                             maxLength={100}
+                            minLength={5}
                         />
                     </label>
                     <button type="submit">Cadastrar Bicicleta</button>
