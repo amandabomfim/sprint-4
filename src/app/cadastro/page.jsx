@@ -13,7 +13,6 @@ export default function Cadastro() {
     celular: "",
     cep: "",
     endereco: "",
-    complemento: "",
   });
 
   const handleChange = (e) => {
@@ -116,17 +115,6 @@ export default function Cadastro() {
             id="endereco"
             name="endereco"
             value={formData.endereco}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className={styles.campo}>
-          <label htmlFor="complemento">Complemento:</label>
-          <input
-            type="text"
-            id="complemento"
-            name="complemento"
-            value={formData.complemento}
             onChange={handleChange}
             required
           />
