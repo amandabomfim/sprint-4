@@ -34,7 +34,7 @@ export default function Home() {
                 </div>
                 <div className={styles.rightColumn}>
                 <div className="imagemBicicleta">
-                  <Image src={imagemBicicleta} alt="Imagem_bicicleta" width={600} height={900}/>
+                  <Image src={imagemBicicleta} alt="Imagem_bicicleta" layout={'fill'} objectFit={'contain'} />
                     </div>
                   </div>                
             </main>
