@@ -3,6 +3,8 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./Cadastrobike.module.scss";
 
+
+/* Cadastro bike */
 export default function CadastroBike() {
     const [bikeData, setBikeData] = useState({
         marca : "",
