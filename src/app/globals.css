@@ -22,3 +22,7 @@
     filter: brightness(0.9);
     scale: 1.02;
 }
+
+.text-center {
+    text-align: center;
+}	
