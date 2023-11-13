@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import styles from "./Cadastro.module.scss";
 
 export default function Cadastro() {
@@ -24,6 +25,10 @@ export default function Cadastro() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    fetch("/api/vistoria", {
+      method: "POST",
+      body: JSON.stringify(formData),
+    });
     navigate.push("/cadastrobike");
   };
 
@@ -55,6 +60,7 @@ export default function Cadastro() {
             name="dataNascimento"
             value={formData.dataNascimento}
             onChange={handleChange}
+            max='2005-11-13'
             required
           />
         </div>
@@ -67,7 +73,7 @@ export default function Cadastro() {
             value={formData.email}
             onChange={handleChange}
             maxLength={50}
-            minLength={10}
+            minLength={7}
             required
           />
         </div>
@@ -138,6 +144,7 @@ export default function Cadastro() {
           />
         </div>
         <button type="submit">Cadastrar Bicicleta</button>
+        <p className={styles.txtPC}><Link href="/cadastrobike">já possou cadastro</Link></p>
       </form>
     </main>
   );

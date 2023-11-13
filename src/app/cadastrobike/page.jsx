@@ -2,11 +2,13 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./Cadastrobike.module.scss";
+import Link from "next/link";
 
 
 /* Cadastro bike */
 export default function CadastroBike() {
     const [bikeData, setBikeData] = useState({
+        dsEmail : "",
         marca : "",
         nr_modelo: "",
         modelo: "",
@@ -25,6 +27,13 @@ export default function CadastroBike() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (bikeData.acessorios === "") {
+            setBikeData({ ...bikeData, acessorios: "Nenhum" });
+        }
+        fetch("/api/vistoria", {
+            method: "POST",
+            body: JSON.stringify(bikeData),
+        });
         navigate.push("/upload");
     };
 
@@ -32,6 +41,20 @@ export default function CadastroBike() {
         <main className={styles.cadastroBikeMain}>
             <div className={styles.titulo}>CADASTRO BIKE</div>
                 <form onSubmit={handleSubmit}>
+                <label>
+                        Email Cadastrado:
+                        <input
+                            type="text"
+                            id="email"
+                            name="email"
+                            value={bikeData.dsEmail}
+                            onChange={handleChange}
+                            maxLength={50}
+                            minLength={7}
+                            required
+                        />
+                    </label>
+
                 <label>
                         Marca:
                         <input
@@ -106,7 +129,6 @@ export default function CadastroBike() {
                             name="acessorios"
                             value={bikeData.acessorios}
                             onChange={handleChange}
-                            required
                             maxLength={100}
                         />
                     </label>
