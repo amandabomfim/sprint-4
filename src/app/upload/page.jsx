@@ -7,10 +7,12 @@ import fotoBike from "/public/fotoBike.svg";
 
 export default function Upload() {
     const [msg, setMsg] = useState("");
-    let bike; 
+    const [bike, setBike] = useState(null);
     useEffect(() => {
-    bike = JSON.parse(localStorage.getItem("bike"));
-    }, []);
+        if (typeof window !== 'undefined') {
+            setBike(JSON.parse(localStorage.getItem("bike")));
+        }
+    }, [])
     const naviation = useRouter();
 
     const handleSubmit = async (e) => {
