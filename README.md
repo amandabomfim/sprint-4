@@ -3,3 +3,4 @@
 - Necessário rodar a API de Python e ajeitar os url no código JSX
 - <a href="https://github.com/oleoz1n/APIPorto"> API de Java</a>
 - <a href="https://github.com/oleoz1n/Flask-Vistoria"> API de Python</a>
+- Mudar os URL da pasta API nos arquivos route.jsx
