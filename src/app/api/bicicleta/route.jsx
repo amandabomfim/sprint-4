@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 export async function POST(request){
     const bike = await request.json()
     /* Mudar o URL PARA O IP DA API */
-    const url = "http://localhost:8081/apiporto/webapi/site"
+    const url = "http://localhost:8080/apiporto/webapi/site"
 
     let cadastroDaBike = {
         "acessorio" : {

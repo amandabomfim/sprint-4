@@ -26,16 +26,23 @@ export default function CadastroBike() {
 
     const navigate = useRouter();
     const handleSubmit = async (e) => {
-        localStorage.setItem("bike", JSON.stringify(bikeData));
-        e.preventDefault();
         // Caso o campo de acessórios esteja vazio, o valor "Nenhum" é atribuído a ele
-        if (bikeData.nmAcessorio === "") {
-            setBikeData({ ...bikeData, nmAcessorio: "Nenhum" });
+        e.preventDefault();
+        let bike = bikeData
+        try{
+        if (bikeData.nmAcessorio == "") {
+            bike = { ...bikeData, nmAcessorio: "Nenhum" }
+            setBikeData(bike);
         }
+        } catch(e) {
+            console.log(e)
+        }
+       
         // Faz uma requisição para a API com os dados do formulário
+        console.log(bikeData['nmAcessorio'])
         const response = await fetch("/api/bicicleta", {
             method: "POST",
-            body: JSON.stringify(bikeData),
+            body: JSON.stringify(bike),
         });
         // Realiza a rolagem suave para o topo da página
         window.scrollTo({
@@ -49,7 +56,7 @@ export default function CadastroBike() {
             setmsg(msgResponse.body);
             setTimeout(() => {
                 setmsg("");
-                
+                localStorage.setItem("bike", JSON.stringify(bikeData));
                 navigate.push("/upload");
             }, 3000);
         }

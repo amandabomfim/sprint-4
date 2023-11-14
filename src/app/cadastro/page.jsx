@@ -178,7 +178,7 @@ export default function Cadastro() {
                         required
                     />
                 </div>
-                <button type="submit">Cadastrar Bicicleta</button>
+                <button type="submit">Cadastrar Cliente</button>
                 <p className={styles.txtPC}>
                     <Link href="/cadastrobike">já possou cadastro</Link>
                 </p>
